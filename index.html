@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>人生の転機</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- GSAP -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <div class="fv">
+        <!-- Text -->
+        <div class="title">
+            <p class="subtitle">メディアデザイン演習</p>
+            <h1>人生の転機</h1>
+        </div>
+
+        <!-- SVG -->
+        <svg class="bg-svg" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+            <!-- circles -->
+            <circle class="circle c1" cx="450" cy="300" r="0" data-r="130" style="--c: #ffffff" />
+            <circle class="circle c2" cx="600" cy="300" r="0" data-r="90" style="--c: #2c6db6" />
+            <circle class="circle c3" cx="780" cy="370" r="0" data-r="160" style="--c: #ffffff" />
+            <circle class="circle c4" cx="490" cy="510" r="0" data-r="200" style="--c: #2c6db6" />
+            <circle class="circle c5" cx="750" cy="550" r="0" data-r="110" style="--c: #ffffff" />
+
+            <!-- glow dots -->
+            <circle class="glow-dot" cx="554" cy="378" r="25" />
+            <circle class="glow-dot" cx="554" cy="222" r="25" />
+            <circle class="glow-dot" cx="345" cy="370" r="25" />
+            <circle class="glow-dot" cx="577" cy="330" r="25" />
+            <circle class="glow-dot" cx="675" cy="250" r="25" />
+            <circle class="glow-dot" cx="621" cy="388" r="25" />
+            <circle class="glow-dot" cx="689" cy="455" r="25" />
+            <circle class="glow-dot" cx="561" cy="381" r="25" />
+            <circle class="glow-dot" cx="690" cy="502" r="25" />
+            <circle class="glow-dot" cx="620" cy="359" r="25" />
+            <circle class="glow-dot" cx="853" cy="512" r="25" />
+            <circle class="glow-dot" cx="665" cy="481" r="25" />
+            <circle class="glow-dot" cx="684" cy="462" r="25" />
+            <circle class="glow-dot" cx="661" cy="615" r="25" />
+        </svg>
+    </div>
+
+    <!-- Personal Title Section -->
+    <section class="personal-title-section">
+        <svg class="spiral-svg" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+            <!-- 二重らせん構造の3本のパス -->
+            <path class="spiral-path spiral1" d="M1200,400 Q1000,300 800,400 Q600,500 400,400 Q200,300 0,400"
+                stroke="#ffffff" stroke-width="0.6" fill="none" />
+            <path class="spiral-path spiral2" d="M1200,420 Q1000,320 800,420 Q600,520 400,420 Q200,320 0,420"
+                stroke="#ffffff" stroke-width="0.6" fill="none" />
+            <path class="spiral-path spiral3" d="M1200,380 Q1000,280 800,380 Q600,480 400,380 Q200,280 0,380"
+                stroke="#ffffff" stroke-width="0.6" fill="none" />
+        </svg>
+
+        <div class="title-content">
+            <h2>Though Uncertainry</h2>
+            <p>―迷いながらも進むから、確信に辿り着く―</p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="intro-inner">
+
+            <h2 class="intro-title">Intro</h2>
+
+            <p class="intro-text">
+                人生の中には、<span class="highlight">「あの瞬間がなかったら今の自分はいない」</span>と言えるような転機がある。<br>
+                それは突然訪れる出来事かもしれないし、迷いの中で選んだ一歩かもしれない。
+            </p>
+
+            <p class="intro-text">
+                今回、私は父の高校時代の友人であり、広告業界で活躍する豊さんに<br>
+                「人生の転機」についてお話を伺った。
+            </p>
+
+            <p class="intro-text">
+                学生の頃は将来のイメージなんて全く持てなかった青年が、<br>
+                どうやって今の場所まで辿り着いたのか。<br>
+                その物語は、迷いながら生きる私たちに多くの気づきを与えてくれるはずだ。
+            </p>
+
+            <p class="intro-text">
+                ここでは、豊さんの歩んできた三つの転機を中心に、<br>
+                その選択の裏側にある <span class="highlight">「思考」</span> と <span class="highlight">「覚悟」</span> に迫る。
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <h2 class="profile-title">profile</h2>
+
+        <div class="profile-cards">
+            <!-- Card 1 -->
+            <div class="profile-card">
+                <svg class="profile-border" viewBox="0 0 500 580" xmlns="http://www.w3.org/2000/svg">
+                    <path class="border-rect" d="M 20,20 L 480,20 Q 500,20 500,40 L 500,540 Q 500,560 480,560 L 20,560 Q 0,560 0,540 L 0,40 Q 0,20 20,20" stroke="#ffffff" stroke-width="1" fill="none" />
+                </svg>
+                <div class="profile-content">
+                    <h3 class="profile-name">豊さん</h3>
+                    <p class="profile-text">父の高校時代の友人<br>サッカー部で負けたらある「罰走」と「坊主」が<br>嫌だったのに今の趣味はマラソンで髪型は坊主であり<br>「人生何があるか分からない」を体現した男</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="profile-card">
+                <svg class="profile-border" viewBox="0 0 500 580" xmlns="http://www.w3.org/2000/svg">
+                    <path class="border-rect" d="M 20,20 L 480,20 Q 500,20 500,40 L 500,540 Q 500,560 480,560 L 20,560 Q 0,560 0,540 L 0,40 Q 0,20 20,20" stroke="#ffffff" stroke-width="1" fill="none" />
+                </svg>
+                <div class="profile-content">
+                    <h3 class="profile-name">楓</h3>
+                    <p class="profile-text">デザイン工学部システムデザイン学科2年<br>サッカー観戦と音楽が大好きな<br>ただの金欠大学生<br>ちょっと坊主にしてみたい</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents Section -->
+    <section class="toc-section">
+        <div class="toc-container">
+            <!-- Episode 1 -->
+            <div class="toc-item">
+                <span class="episode-label">episode1</span>
+                <h3 class="episode-title">Awakening</h3>
+            </div>
+
+            <!-- Episode 2 -->
+            <div class="toc-item">
+                <span class="episode-label">episode2</span>
+                <h3 class="episode-title">Dilemma</h3>
+            </div>
+
+            <!-- Episode 3 -->
+            <div class="toc-item">
+                <span class="episode-label">episode3</span>
+                <h3 class="episode-title">Invitation</h3>
+            </div>
+
+            <!-- Episode 4 -->
+            <div class="toc-item">
+                <span class="episode-label">episode4</span>
+                <h3 class="episode-title">Conviction</h3>
+            </div>
+
+            <!-- Next Step -->
+            <div class="toc-item toc-next-step">
+                <h3 class="next-step-title">Your Next Step</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Episode 1: Awakening Section -->
+    <section class="episode1-section">
+        <div class="episode1-inner">
+            <!-- Episode 1 Title -->
+            <div class="episode1-title">
+                <span class="episode1-label">episode1</span>
+                <h3 class="episode1-heading">Awakening</h3>
+            </div>
+
+            <!-- Episode 1 Overview -->
+            <p class="episode1-overview">
+                将来像も、働く意味も、まだ輪郭を持っていなかった学生時代。<br>音楽とカルチャーに身を委ねていた日常は、<span class="highlight-phrase">ある人との別れ</span>を境に大きく揺れ動き始める。<br>ここから語られるのは、「働く」という言葉と、人との関係の中で初めて真正面から向き合った、<br>最初のターニングポイントだ。
+            </p>
+        </div>
+    </section>
+
+    <!-- Episode 1: Content Section -->
+    <section class="episode1-content-section">
+        <div class="episode1-content">
+            <p class="rally rally1">大体今の楓君と同じくらいの時期なんだけど、当時は働くことの具体的イメージが全然なくて、モチベーションも全くなかったんだ。<br>その頃は音楽とかイギリスの若者文化が好きで、レコード屋とクラブ通いの毎日だったな。
+            <span class="rally-right">僕も音楽とか好きなんで、そんな感じの日常です。（笑）</span></p>
+            <p class="rally rally2">まだ学生のままでいたいと思っていたんだけど、大学4年生に上がる直前にターニングポイントの一つ目になる<span class="highlight-phrase">祖母の死</span>があったんだ。それをきっかけに将来のことを真剣に考え始めて、、、まあ遅すぎなんだけどね（笑）
+            <span class="rally-right">身近な人の死って、すごく自分の中で何かが変わりますよね。<br>ぽっかり空いた穴を埋めようとする原動力というかなんていうか、、、</span></p>
+            <p class="rally rally3">そうそう。そこからがむしゃらに就活を頑張り始めて、業界研究とか就職セミナーは全然参加してなくて、商社やメーカーの違いすらよくわからない。でも、どうせ働くなら自分の興味のある領域がいい。ただ、仕事にすることで嫌いになりたくないから、趣味の世界で働きたくはない。そこで見つけたのが、広告の仕事なんだ。
+            <span class="rally-right">好きなことを仕事にしたくないって、なんか深いっていうか、、、すごいですね。</span></p>
+            <p class="rally rally4">完全に出遅れたし、小さくてもいいからまずは広告会社（広告業界）に入ることを目指したんだ。実家の近くの本屋でマスコミ関連の就職本を買って、200社くらい電話をかけて50社くらいに資料請求をして、試験受けて、3～4社くらいから内定をもらうことができたんだ。
+            <span class="rally-right">えーーー、めっちゃ大変。</span></p>
+        </div>
+    </section>
+
+    <!-- Episode 2: Dilemma Section -->
+    <section class="episode2-section">
+        <div class="episode2-inner">
+            <!-- Episode 2 Title -->
+            <div class="episode2-title">
+                <span class="episode2-label">episode2</span>
+                <h3 class="episode2-heading">Dilemma</h3>
+            </div>
+
+            <!-- Episode 2 Overview -->
+            <p class="episode2-overview">
+                成果を出し続ける日々の中で、仕事との距離が少しずつ変わっていった。<br>旅先での出会いと、人とのつながりの広がりが、<span class="highlight-phrase">価値観に別の軸</span>を与えていく<br>ここで語られるのは、夢と合理の間で揺れながら選び取った次のターニングポイントだ。
+            </p>
+        </div>
+    </section>
+
+    <!-- Episode 2: Content Section -->
+    <section class="episode2-content-section">
+        <div class="episode2-content">
+            <p class="rally rally1">そこで本当にがむしゃらに働きまくった。飛び込みの新規開発担当になって、1年目・2年目と新規獲得で部門ナンバー1になることができたんだよね。そのあと、いわゆる広告代理店っぽい業務を行う部門に異動して、そこでも新規獲得を頑張っていたんだけど、だんだん「もう自分がやれることがなくなってきたな」って感じ始めたんだ。
+            <span class="rally-right">働き尽くして「やり切った」って感じられるのすごいです。</span></p>
+            <p class="rally rally2">ちょうどその頃、友人の影響でバックパッカー的な貧乏旅行にハマり始めてね。海外に行くと写真をたくさん撮るようになって、働きながら写真の専門学校にも通い始めたんだ。アジアとかアフリカ、中南米、そして国内も、撮影の旅に頻繁に出かけるようになっていった。
+            <span class="rally-right">確かに、僕も海外行くと普段よりめっちゃ写真撮っちゃいます（笑）。</span></p>
+            <p class="rally rally3">それで、真剣に世界一周旅行の計画を立て始めた。でもお金がなかったから、当時出版社がWEBコンテンツを拡充しようと躍起になっていたことに着目してさ。お金を稼ぎながら旅をしようと思って「世界の20代は何を考えて生きているのか」をテーマに、日記と体験記を書いて出版社に売り込もうって考えてたんだよね。
+            <span class="rally-right">それ、めちゃくちゃ読みたいです！</span></p>
+            <p class="rally rally4">その時27歳で。世界旅行に行く前に、広告業界で自分の価値がどの程度なのか知りたくなっていた時期でもあって、ちょうど友人2人からそれぞれ広告代理店の転職の話が来て、、、
+            <span class="rally-right">え、転職の話が同時に2件も！？すごいタイミングですね。</span></p>
+            <p class="rally rally5">そうなんだよ。そこで、自分の市場価値がそれなりにあることがわかった。でも、世界一周っていう夢も捨てきれない。迷いに迷って、、、「世界一周から帰ってきて今の仕事ができる可能性は低いんじゃないかな？」って思い始めて、<span class="highlight-phrase">合理的に「世界一周はもう少し先でもできる」って判断して転職を選んだんだ。</span>ここがターニングポイントの二つ目かな。
+            <span class="rally-right">やりたいことがあっても、仕事を選べる判断力がすごいです。僕なら絶対、先に行っちゃいそう。</span></p>
+        </div>
+    </section>
+
+    <!-- Episode 3: Invitation Section -->
+    <section class="episode3-section">
+        <div class="episode3-inner">
+            <!-- Episode 3 Title -->
+            <div class="episode3-title">
+                <span class="episode3-label">episode3</span>
+                <h3 class="episode3-heading">Invitation</h3>
+            </div>
+
+            <!-- Episode 3 Overview -->
+            <p class="episode3-overview">
+                スキルと成果を積み重ねる一方で、心身は静かに限界へ向かっていた。<br>その行き詰まりを抜け出すきっかけとなったのは、先輩との関係だった。<br>仕事の意味を社会の中で捉え直す3つ目のターニングポイントだ。
+            </p>
+        </div>
+    </section>
+
+    <!-- Episode 3: Content Section -->
+    <section class="episode3-content-section">
+        <div class="episode3-content">
+            <p class="rally rally1">新しい会社では営業担当として配属されて、1社目とは質の違う仕事ができて、どんどん自分のスキルアップにつながった。労働環境は最悪だったけどね（笑）。そんな生活を2年くらい続けていたら、広告業界最大級の予算規模のキャンペーンを担当することになってさ。毎日朝方まで働いて、会社近くのホテルに泊まる生活。そういうのが続いたら、やっぱり体は壊れちゃって、、、結果、他社との競合プレゼンに負けて会社としてはダメージが大きかったけど、個人的にはホッとしたんだよね。
+            <span class="rally-right">縛られていたものから解放された時って、結果がどうであれホッとしますよね。</span></p>
+            <p class="rally rally2">そうだね。体力的にも精神的にも限界だったし、あの経験で働き方についても考えるようになった。ターニングポイントの三つ目になるんだけど、その会社でさらに1年くらい働いた頃、<span class="highlight-phrase">転職していった先輩から新しい会社に誘われたんだ。</span>採用試験を受けて合格。それで、今に至るって感じだね。
+            <span class="rally-right">今の会社って規模的には一番大きいと思うんですけど、他と違うところはありますか？</span></p>
+            <p class="rally rally3">やっぱり規模が大きいと扱うプロジェクトのスケールも桁違いで、世の中への影響も大きい。責任とプレッシャーはあるけど、その分達成感もすごいんだよね。ただ、組織が大きいと配慮すべきことも増えるし、動かすのに時間がかかるから、それがちょっとストレスだったりもする。でも、その分だけ自分の仕事が社会の中でどんな意味を持つかを強く実感できるようになったかな。
+        </div>
+    </section>
+
+    <!-- Episode 4: Conviction Section -->
+    <section class="episode4-section">
+        <div class="episode4-inner">
+            <!-- Episode 4 Title -->
+            <div class="episode4-title">
+                <span class="episode4-label">episode4</span>
+                <h3 class="episode4-heading">Conviction</h3>
+            </div>
+
+            <!-- Episode 4 Overview -->
+            <p class="episode4-overview">
+                三つの転機を貫いていたのは、いつも<span class="highlight-phrase">「人」の存在</span>だった。<br>チャンスは偶然ではなく、関係性の中から手渡される。<br>そのパスをどう受け取り、どこまで跳ぶのか、、、<br>選択と姿勢が人生を形作っていく
+            </p>
+        </div>
+    </section>
+
+    <!-- Episode 4: Content Section -->
+    <section class="episode4-content-section">
+        <div class="episode4-content">
+            <p class="rally rally1">
+            <span class="rally-right">大きく三つの転機があったとおっしゃっていましたが、何か通ずるものはありますか？</span></p>
+            <p class="rally rally2"><span class="highlight-phrase">全ての転機には「人」が関わっているってことかな。</span>どんな時でも周りの人がチャンスのパスをしてくれて、俺はそのパスの上でちょっとジャンプしただけ。別に「チャンスをくれるかも」って思って関わってるわけじゃないけど、どんなに考え方が合わない相手でも、うまく関係性を築くことは大事だって伝えたいかな。
+            <span class="rally-right">確かに、、、僕のターニングポイントにもいつも家族や友人がいました。<br>豊さんは、もらったチャンスを成功にするために、どんな選択をしているんですか？</span></p>
+            <p class="rally rally3">人生の分岐に立つと、「成功したら…」「失敗したら…」って考えると思う。でも俺は、自分が選んだ道を成功にできるかどうかが大事だと思ってる。失敗って決まっているものじゃなくて、成功と思えるところまで持っていく努力をすること。それを伝えたいね。
+            <span class="rally-right">僕はいつも失敗が怖くてチャレンジできないんです、、、<br>どれだけ険しい道でも、頑張りきれば結果は出るってことですかね？</span></p>
+            <p class="rally rally4">そうそう。で、質問の答えだけど…俺はめちゃくちゃ考えて選択するタイプ。超合理的（笑）。例えば中3のとき、県の強豪校からサッカーの特待生でスカウトが来てた。でも「自分は試合に出られるのか？」「もし出られなかったら何が残る？」って考えたんだよね。それで、頭もそこそこで市内でも強い、楓くんのお父さんと同じ高校を選んだんだ。
+            <span class="rally-right">もうその考え方は中学生の頃からあったんですね。<br>めちゃくちゃ大人だ、、、僕なんて都心で制服がカッコいいって理由で高校選びました（笑）。<br>では、そんな豊さんを象徴する言葉を一つ挙げるとしたら？</span></p>
+            <p class="rally rally5"><span class="highlight-phrase">「全力でやる」だね。</span>与えられた環境でベストを尽くす。社会人になったら「ここが踏ん張りどころ！」って瞬間が絶対にある。そのタイミングを自分の嗅覚で感じて、そこで全力出せるかどうか。そこで頑張れる人が将来成功する。
+            <span class="rally-right">僕も課題に追われてると、「ここ頑張ったら成長するんだろうな」って思う時あります、、、<br>学生の頑張りなんてたかが知れてますけど（笑）。<br>最後の質問です。若い頃に“やっておいた方がいいこと”や“今の学生に伝えたいこと”はありますか？</span></p>
+            <p class="rally rally6">二つあって、一つ目は<span class="highlight-phrase">「謙虚であれ」。</span>人は驕った瞬間に成長が止まる。他人には絶対に優れた点があるから、ちゃんと意見を聞くこと。二つ目は<span class="highlight-phrase">「周りの人を大切にしろ」。</span>将来、必ず人がチャンスをくれる。損得だけで関わるのはダメだけどね（笑）。
+            <span class="rally-right">今日話してみて豊さんの印象が変わりました。「体育会系でがむしゃらに頑張ってきた人」って思ってましたけど、<br>すごく合理的で、謙虚で、ロジカルな部分にフィジカルが乗ってるんだなって思いました。<br>本日は本当にありがとうございました！</span></p>
+        </div>
+    </section>
+
+    <script src="function.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,678 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+.fv {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* SVG */
+.bg-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* circles */
+.circle {
+    fill: none;
+    stroke: var(--c);
+    stroke-width: 0.6;
+}
+
+/* glow dots */
+.glow-dot {
+    fill: #2c6db6;
+    opacity: 0;
+    filter: blur(25px);
+    transform-origin: center;
+}
+
+/* title */
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    filter: blur(50px);
+}
+
+.subtitle {
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    margin-bottom: 0px;
+    color: #898989;
+    /*font-family: ここで変える　*/
+}
+
+h1 {
+    font-size: 70px;
+    letter-spacing: 0.15em;
+    color: #ffffff;
+    /*font-family: ここで変える　*/
+}
+
+/* Personal Title Section */
+.personal-title-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spiral-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.spiral-path {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
+
+.title-content {
+    position: relative;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-content h2 {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 20px;
+    writing-mode: horizontal-tb;
+}
+
+.title-content p {
+    font-size: 24px;
+    color: #ccc;
+    writing-mode: horizontal-tb;
+}
+
+/* Intro Section */
+.intro-section {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-inner {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* title */
+.intro-title {
+  font-size: 56px;
+  margin-bottom: 60px;
+  opacity: 0;
+}
+
+/* text */
+.intro-text {
+  font-size: 18px;
+  line-height: 2.2;
+  margin-bottom: 32px;
+  opacity: 0;
+}
+
+/* blue highlight */
+.highlight {
+  color: #2c6db6;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+/* Profile Section */
+.profile-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile Title */
+.profile-title {
+  font-size: 56px;
+  margin-bottom: 100px;
+  opacity: 0;
+}
+
+/* Profile Cards Container */
+.profile-cards {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Card */
+.profile-card {
+  position: relative;
+  width: 500px;
+  height: 580px;  /* viewBoxの高さと同じにしておくと調整しやすい */
+}
+
+.profile-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.border-path {
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+}
+
+.border-rect {
+  stroke-dasharray: 2050;  /* パスの周囲の長さ（変更時：左右辺の合計値を50ずつ増減） */
+  stroke-dashoffset: 2000;
+}
+
+.profile-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px 30px;
+  box-sizing: border-box;
+}
+
+.profile-name {
+  font-size: 28px;
+  margin-bottom: 30px;
+  opacity: 0;
+  text-align: center;
+}
+
+.profile-text {
+  position: absolute;
+  top: calc(100% - 140px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Table of Contents Section */
+.toc-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+/* Container for all TOC items */
+.toc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Individual TOC item */
+.toc-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* ← 左寄せにする（中央→左寄せに変更） */
+  justify-content: center;
+  gap: 0;
+  opacity: 0;
+  width: auto;  /* ← 100%から自動幅に変更 */
+}
+
+/* Episode label (小さいテキスト) */
+.episode-label {
+  font-size: 25px;
+  color: #999;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: left;  /* ← 中央揃い→左揃いに変更 */
+  margin-bottom: 20px;  /* ← タイトルとの間隔を調整する場合はここを変更 */
+}
+
+/* Episode title (大きいテキスト) */
+.episode-title {
+  font-size: 60px;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  font-weight: normal;
+  margin: 0;
+  line-height: 0.1;  /* ← 行間を詰める場合はここの値を調整（デフォルト1 = 詰まった状態、値を大きくすると行間が広がる） */
+  text-align: left;  /* ← タイトルを左揃いにする */
+  display: block;  /* ← テキスト整列を確実に機能させる */
+  width: 100%;  /* ← 親要素の幅いっぱいに広げて左揃えを実現 */
+}
+
+/* Your Next Step item */
+.toc-next-step {
+  align-items: flex-start;  /* ← 中央→左寄せに変更 */
+  padding-top: 40px;
+}
+
+/* Next Step title */
+.next-step-title {
+  font-size: 60px;
+  color: #ffffff;
+  letter-spacing: 0.005em;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1;  /* ← 行間を詰める場合はここの値を調整 */
+  text-align: left;  /* ← タイトルを左揃いにする */
+  display: block;  /* ← テキスト整列を確実に機能させる */
+  width: 100%;  /* ← 親要素の幅いっぱいに広げて左揃えを実現 */
+}
+
+/* Episode 1: Awakening Section */
+.episode1-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.episode1-inner {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Episode 1 Title */
+.episode1-title {
+  display: flex;
+  flex-direction: column;  /* ← 上下積み重ねに変更 */
+  align-items: flex-start;  /* ← 左端にくっつける */
+  gap: 20px;  /* ← episode1とAwakening（1行目と2行目）の間隔を調整する場合はここを変更 */
+  margin-bottom: 60px;  /* ← タイトルセクション全体と本文の間隔を調整する場合はここを変更 */
+  opacity: 0;
+  margin-left: 55%;  /* ← 全体を中央に配置するために左マージンで調整 */
+  transform: translateX(-50%);  /* ← 中央配置 */
+}
+
+/* Episode 1 Label */
+.episode1-label {
+  font-size: 25px;
+  color: #999;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-align: left;
+  margin-bottom: 0;  /* ← 横並びなので余白は不要 */
+  flex-shrink: 0;  /* ← テキストが縮むのを防ぐ */
+}
+
+/* Episode 1 Heading */
+.episode1-heading {
+  font-size: 60px;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  font-weight: normal;
+  margin: 0;
+  line-height: 0.1;  /* ← 行間を詰める場合はここの値を調整 */
+  text-align: left;  /* ← 左揃い */
+}
+
+/* Episode 1 Overview */
+.episode1-overview {
+  font-size: 18px;
+  line-height: 2.2;
+  opacity: 0;
+  text-align: center;
+}
+
+/* Highlight phrase for animation */
+.highlight-phrase {
+  color: #ffffff;
+  transition: color 0.5s ease;
+  /* 光らせるエフェクト（色変更時に以下の値でカスタマイズ可能） */
+   text-shadow: 0 0 20px #2c6db6, 0 0 40px #2c6db6;
+}
+
+/* ========================
+   Episode 1: Content Section
+   シンプルなテキスト表示
+======================== */
+
+.episode1-content-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.episode1-content {
+  max-width: 900px;
+  width: 90%;
+  text-align: left;  /* ← 左詰め */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;  /* ← ラリー間の間隔 */
+  margin-left: 250px;  /* ← 中央位置の調整（-50px左へ、50px右へ など）*/
+  margin-right: 250px;
+}
+
+/* ラリー（段落）テキスト・左詰め */
+.rally {
+  font-size: 20px;  /* ← テキストサイズ（調整可能） */
+  line-height: 1.6;  /* ← 左詰めテキストの行間（調整可能） */
+  color: #ffffff;  /* ← テキスト色 */
+  margin: 0;  /* ← マージンをリセット */
+  padding: 0;  /* ← パディングなし */
+  opacity: 0;  /* ← 初期状態は非表示（フェードイン用） */
+  transition: opacity 0.8s ease-in-out;  /* ← フェードインアニメーション */
+}
+
+/* ラリー内の右詰めテキスト */
+.rally-right {
+  display: block;  /* ← ブロック要素として表示 */
+  text-align: right;  /* ← 右詰め */
+  line-height: 1.6;  /* ← 右詰めテキストの行間（調整可能） */
+  margin-top: 60px;  /* ← 左詰めテキストとの間隔（調整可能） */
+  margin-bottom: 40px;
+}
+
+/* ========================
+   Episode 2: Dilemma Section
+======================== */
+
+.episode2-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.episode2-inner {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Episode 2 Title */
+.episode2-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 60px;
+  opacity: 0;
+  margin-left: 55%;
+  transform: translateX(-50%);
+}
+
+/* Episode 2 Label */
+.episode2-label {
+  font-size: 25px;
+  color: #999;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-align: left;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+/* Episode 2 Heading */
+.episode2-heading {
+  font-size: 60px;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  font-weight: normal;
+  margin: 0;
+  line-height: 0.1;
+  text-align: left;
+}
+
+/* Episode 2 Overview */
+.episode2-overview {
+  font-size: 18px;
+  line-height: 2.2;
+  opacity: 0;
+  text-align: center;
+}
+
+/* ========================
+   Episode 2: Content Section
+======================== */
+
+.episode2-content-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.episode2-content {
+  max-width: 900px;
+  width: 90%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+/* ========================
+   Episode 3: Invitation Section
+======================== */
+
+.episode3-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.episode3-inner {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Episode 3 Title */
+.episode3-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 60px;
+  opacity: 0;
+  margin-left: 53%;
+  transform: translateX(-50%);
+}
+
+/* Episode 3 Label */
+.episode3-label {
+  font-size: 25px;
+  color: #999;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-align: left;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+/* Episode 3 Heading */
+.episode3-heading {
+  font-size: 60px;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  font-weight: normal;
+  margin: 0;
+  line-height: 0.1;
+  text-align: left;
+}
+
+/* Episode 3 Overview */
+.episode3-overview {
+  font-size: 18px;
+  line-height: 2.2;
+  opacity: 0;
+  text-align: center;
+}
+
+/* ========================
+   Episode 3: Content Section
+======================== */
+
+.episode3-content-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.episode3-content {
+  max-width: 900px;
+  width: 90%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+/* ========================
+   Episode 4: Conviction Section
+======================== */
+
+.episode4-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.episode4-inner {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Episode 4 Title */
+.episode4-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 60px;
+  opacity: 0;
+  margin-left: 45%;
+  transform: translateX(-50%);
+}
+
+/* Episode 4 Label */
+.episode4-label {
+  font-size: 25px;
+  color: #999;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-align: left;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+/* Episode 4 Heading */
+.episode4-heading {
+  font-size: 60px;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  font-weight: normal;
+  margin: 0;
+  line-height: 0.1;
+  text-align: left;
+}
+
+/* Episode 4 Overview */
+.episode4-overview {
+  font-size: 18px;
+  line-height: 2.2;
+  opacity: 0;
+  text-align: center;
+}
+
+/* ========================
+   Episode 4: Content Section
+======================== */
+
+.episode4-content-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.episode4-content {
+  max-width: 900px;
+  width: 90%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
