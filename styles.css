@@ -1,14 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  background-color: #ffffff;
+  color: #ffffff; /* ← 黒背景前提なので白文字のまま */
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
 
-body {
-    background: #000;
-    color: #fff;
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
-}
 
 .fv {
     position: relative;
@@ -68,37 +63,20 @@ h1 {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.spiral-svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.spiral-path {
-    stroke-dasharray: 0;
-    stroke-dashoffset: 0;
 }
 
 .title-content {
     position: relative;
     text-align: center;
     opacity: 0;
-    z-index: 1;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    transform: translateY(20px);
 }
 
 .title-content h2 {
-    font-size: 50px;
+    font-size: 60px;
     color: #fff;
     margin-bottom: 20px;
     writing-mode: horizontal-tb;
@@ -150,7 +128,6 @@ h1 {
 .profile-section {
   width: 100vw;
   min-height: 100vh;
-  background: #000;
   padding: 100px 0;
   display: flex;
   flex-direction: column;
@@ -234,7 +211,6 @@ h1 {
 .toc-section {
   width: 100vw;
   min-height: 100vh;
-  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,6 +261,7 @@ h1 {
   text-align: left;  /* ← タイトルを左揃いにする */
   display: block;  /* ← テキスト整列を確実に機能させる */
   width: 100%;  /* ← 親要素の幅いっぱいに広げて左揃えを実現 */
+  transition: text-shadow 0.4s ease, filter 0.4s ease;
 }
 
 /* Your Next Step item */
@@ -310,7 +287,6 @@ h1 {
 .episode1-section {
   width: 100vw;
   min-height: 100vh;
-  background: #000;
   padding: 100px 0;
   display: flex;
   align-items: center;
@@ -380,7 +356,6 @@ h1 {
 .episode1-content-section {
   width: 100vw;
   min-height: 100vh;
-  background: #000;
   padding: 100px 0;
   display: flex;
   align-items: center;
@@ -394,15 +369,15 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 30px;  /* ← ラリー間の間隔 */
-  margin-left: 250px;  /* ← 中央位置の調整（-50px左へ、50px右へ など）*/
-  margin-right: 250px;
+  margin-left: 350px;  /* ← 中央位置の調整（-50px左へ、50px右へ など）*/
+  margin-right: 350px;
 }
 
 /* ラリー（段落）テキスト・左詰め */
 .rally {
-  font-size: 20px;  /* ← テキストサイズ（調整可能） */
+  font-size: 16px;  /* ← テキストサイズ（調整可能） */
   line-height: 1.6;  /* ← 左詰めテキストの行間（調整可能） */
-  color: #ffffff;  /* ← テキスト色 */
+  color: lightgray;  /* ← テキスト色 */
   margin: 0;  /* ← マージンをリセット */
   padding: 0;  /* ← パディングなし */
   opacity: 0;  /* ← 初期状態は非表示（フェードイン用） */
@@ -416,6 +391,7 @@ h1 {
   line-height: 1.6;  /* ← 右詰めテキストの行間（調整可能） */
   margin-top: 60px;  /* ← 左詰めテキストとの間隔（調整可能） */
   margin-bottom: 40px;
+  color: gray;
 }
 
 /* ========================
@@ -425,7 +401,6 @@ h1 {
 .episode2-section {
   width: 100vw;
   min-height: 100vh;
-  background: #000;
   padding: 100px 0;
   display: flex;
   align-items: center;
@@ -486,7 +461,6 @@ h1 {
 .episode2-content-section {
   width: 100vw;
   min-height: 100vh;
-  background: #000;
   padding: 100px 0;
   display: flex;
   align-items: center;
@@ -500,8 +474,8 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 350px;
+  margin-right: 350px;
 }
 
 /* ========================
@@ -511,7 +485,6 @@ h1 {
 .episode3-section {
   width: 100vw;
   min-height: 100vh;
-  background: #000;
   padding: 100px 0;
   display: flex;
   align-items: center;
@@ -572,7 +545,6 @@ h1 {
 .episode3-content-section {
   width: 100vw;
   min-height: 100vh;
-  background: #000;
   padding: 100px 0;
   display: flex;
   align-items: center;
@@ -586,8 +558,8 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 350px;
+  margin-right: 350px;
 }
 
 /* ========================
@@ -597,7 +569,6 @@ h1 {
 .episode4-section {
   width: 100vw;
   min-height: 100vh;
-  background: #000;
   padding: 100px 0;
   display: flex;
   align-items: center;
@@ -658,7 +629,6 @@ h1 {
 .episode4-content-section {
   width: 100vw;
   min-height: 100vh;
-  background: #000;
   padding: 100px 0;
   display: flex;
   align-items: center;
@@ -672,7 +642,117 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 350px;
+  margin-right: 350px;
 }
 
+.transition-space {
+  height: 50vh; /* ← ここで距離を調整 */
+}
+
+.black-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.next-step-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.next-step-inner {
+  text-align: center;
+  max-width: 800px;
+}
+
+.next-step-section .next-step-title {
+  font-size: 60px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 24px;
+  opacity: 0;
+  filter: blur(8px);
+}
+
+.next-step-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  opacity: 0;
+  filter: blur(8px);
+}
+
+/* ========================
+   Layer Control（最重要）
+======================== */
+
+/* すべての文字・コンテンツ */
+.fv,
+.personal-title-section,
+.intro-section,
+.profile-section,
+.toc-section,
+.episode1-section,
+.episode1-content-section,
+.episode2-section,
+.episode2-content-section,
+.episode3-section,
+.episode3-content-section,
+.episode4-section,
+.episode4-content-section,
+.next-step-section {
+  position: relative;
+  z-index: 20;
+}
+
+.toc-item {
+  cursor: pointer;
+}
+
+.toc-item:hover .episode-title{
+  text-shadow:
+    0 0 6px  rgba(255,255,255,0.9),
+    0 0 14px rgba(255,255,255,0.8),
+    0 0 30px rgba(255,255,255,0.7),
+    0 0 60px rgba(255,255,255,0.5);
+  filter:
+    drop-shadow(0 0 25px rgba(255,255,255,0.9))
+    drop-shadow(0 0 60px rgba(255,255,255,0.6));  
+}
+
+.toc-item:hover .next-step-title{
+  text-shadow:
+    0 0 6px  rgba(255,255,255,0.9),
+    0 0 14px rgba(255,255,255,0.8),
+    0 0 30px rgba(255,255,255,0.7),
+    0 0 60px rgba(255,255,255,0.5);
+  filter:
+    drop-shadow(0 0 25px rgba(255,255,255,0.9))
+    drop-shadow(0 0 60px rgba(255,255,255,0.6));  
+}
+
+/* GIFのラッパー */
+.profile-gif-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px; /* GIFの高さ */
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px; /* 好みで角丸 */
+}
+
+/* GIF自体 */
+.profile-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像が枠に収まるように */
+  display: block;
+}

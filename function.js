@@ -93,30 +93,6 @@ tl.call(() => {
 gsap.registerPlugin(ScrollTrigger);
 
 /* -----------------------
-   4-1. Personal Title Section - らせんパスの成長
-   表現: スクロールすると、3本のらせん構造（white線）が
-        ページの左から右へ徐々に伸びる（stroke-dasharrayが増加）
-   実装: stroke-dasharrayを0→2000へアニメーション
-        scrub: trueでスクロール連動
-        ページ内に留まるセクション
------------------------ */
-
-const spirals = document.querySelectorAll(".spiral-path");
-spirals.forEach((spiral, index) => {
-    gsap.to(spiral, {
-        strokeDasharray: 2000,
-        duration: 2,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".personal-title-section",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,  // スクロールに連動してアニメーション
-        }
-    });
-});
-
-/* -----------------------
    4-2. Personal Title Section - タイトルテキストフェードイン
    表現: らせんが最後まで伸びきったら、
         英語タイトル「Though Uncertainry」と
@@ -126,18 +102,13 @@ spirals.forEach((spiral, index) => {
 ----------------------- */
 
 gsap.to(".title-content", {
-    opacity: 1,
-    duration: 1,
-    ease: "power2.out",
-    scrollTrigger: {
-        trigger: ".personal-title-section",
-        start: "bottom top",
-        end: "bottom center",
-        scrub: false,
-        onEnter: () => gsap.to(".title-content", { opacity: 1 }),
-        onLeaveBack: () => gsap.to(".title-content", { opacity: 0 }),
-    }
+  opacity: 1,
+  y: 0,
+  duration: 2,
+  ease: "power2.out",
+  delay: 0.5
 });
+
 
 /* -----------------------
    4-3. Intro Section - セクションタイトルフェードイン
@@ -663,4 +634,54 @@ gsap.to(".episode4-content-section .rally", {
             });
         }
     }
+});
+
+gsap.to(".black-overlay", {
+  opacity: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".next-step-section",
+    start: "top bottom",
+    end: "top top",
+    scrub: true,
+  }
+});
+
+gsap.to(".next-step-title", {
+  opacity: 1,
+  filter: "blur(0px)",
+  duration: 1.2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".next-step-section",
+    start: "top 5%", // ← ほぼ白になってから
+  }
+});
+
+gsap.to(".next-step-text", {
+  opacity: 1,
+  filter: "blur(0px)",
+  duration: 1.2,
+  delay: 0.2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".next-step-section",
+    start: "top 5%",
+  }
+});
+
+document.querySelectorAll(".toc-item").forEach(item => {
+  item.addEventListener("click", () => {
+    const target = document.querySelector(item.dataset.target);
+    if (!target) return;
+
+    gsap.to(window, {
+      duration: 1.2,
+      scrollTo: {
+        y: target,
+        offsetY: 0
+      },
+      ease: "power2.out"
+    });
+  });
 });
